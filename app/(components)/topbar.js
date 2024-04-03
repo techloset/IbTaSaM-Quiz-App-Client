@@ -75,7 +75,10 @@ export default function Topbar() {
         answers: [num],
       };
       console.log(formData);
-      await axios.post("http://localhost:5000/api/questions", formData);
+      await axios.post(
+        "https://ibtasam-quiz-app-server.vercel.app/api/questions",
+        formData
+      );
       alert("Data inserted successfully!");
       setQuestion("");
       setOptionsA("");

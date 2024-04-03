@@ -20,7 +20,6 @@ export function flagResult(totalPoints, earnPoints) {
 export async function getServerData(url, callback) {
   const data = await (await axios.get(url))?.data;
   return callback ? callback(data) : data;
-  // console.log("new Data", data);
 }
 
 /** post server data */

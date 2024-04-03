@@ -8,6 +8,7 @@ export const PushAnswer = (result) => async (dispatch) => {
     console.log(error);
   }
 };
+
 export const updateResult = (index) => async (dispatch) => {
   try {
     dispatch(Action.updateResultAction(index));
@@ -18,13 +19,10 @@ export const updateResult = (index) => async (dispatch) => {
 
 // Insert user data
 export const usePublishResult = (resultData) => {
-  const { result, username } = resultData;
   (async () => {
     try {
-      if (result !== [] && !username) throw new Error("couldn't get Result");
       await postServerData(
-        // "http://localhost:5000/api/questions",
-        "http://localhost:5000/api/result",
+        "https://ibtasam-quiz-app-server.vercel.app/api/result",
         resultData,
         (data) => data
       );

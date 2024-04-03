@@ -1,6 +1,5 @@
 "use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Question from "../(components)/question";
 import { MoveNextQuestion, MovePrevQuestion } from "../hooks/FetchQuestion";
 import { useSelector, useDispatch } from "react-redux";
@@ -34,7 +33,6 @@ export default function Quiz() {
   };
 
   const onChecked = (check) => {
-    // console.log(check);
     setChecked(check);
   };
 

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-// import data, { answers } from "../database/data";
 
 import * as Action from "../redux/question_reducer";
 import { getServerData } from "../helper/helper";
@@ -18,9 +17,8 @@ export const useFetchQuestion = () => {
 
     (async () => {
       try {
-        // let question = await data;
         const [questions] = await getServerData(
-          "http://localhost:5000/api/questions"
+          "https://ibtasam-quiz-app-server.vercel.app/api/questions"
         );
 
         const question = questions.questions;

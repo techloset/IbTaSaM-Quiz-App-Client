@@ -74,7 +74,6 @@ export default function Topbar() {
         ],
         answers: [num],
       };
-      console.log(formData);
       await axios.post(
         "https://ibtasam-quiz-app-server.vercel.app/api/questions",
         formData
@@ -87,7 +86,6 @@ export default function Topbar() {
       setAnswer("");
       handleModel();
     } catch (error) {
-      alert("Data inserted successfully!");
       console.error("Error inserting data:", error);
     }
   };
